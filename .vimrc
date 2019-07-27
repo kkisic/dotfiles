@@ -45,6 +45,8 @@ if dein#load_state('~/.vim/dein')
     call dein#add('alvan/vim-closetag')
     call dein#add('posva/vim-vue')
     call dein#add('tomasr/molokai')
+    call dein#add('miyakogi/seiya.vim')
+    call dein#add('dag/vim2hs')
 
     " deoplete
     call dein#add('Shougo/deoplete.nvim')
@@ -58,10 +60,8 @@ if dein#load_state('~/.vim/dein')
                 \ })
     call dein#add('zchee/deoplete-clang')
     call dein#add('posva/vim-vue')
-
-"    call dein#add('dag/vim2hs')
-"    call dein#add('eagletmt/ghcmod-vim')
-"    call dein#add('eagletmt/neco-ghc')
+    call dein#add('eagletmt/ghcmod-vim')
+    call dein#add('eagletmt/neco-ghc')
 
     call dein#end()
     call dein#save_state()
@@ -90,10 +90,16 @@ let g:rainbow_active = 1
 " for vim-closetag
 let g:closetag_filenames = '*.html, *.xml, *.vue'
 
+" for vim2hs
+let g:haskell_conceal = 0
+
 " for molokai
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
+
+" for seiya.vim
+let g:seiya_auto_enable = 1
 
 augroup fileTypeIndent
     autocmd!
