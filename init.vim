@@ -40,12 +40,6 @@ if dein#load_state('~/.vim/dein')
     call dein#load_toml(s:toml, {'lazy': 0})
     call dein#load_toml(s:lazy, {'lazy': 1})
 
-    " deoplete
-    if !has('nvim')
-        call dein#add('roxma/nvim-yarp')
-        call dein#add('roxma/vim-hug-neovim-rpc')
-    endif
-
     call dein#end()
     call dein#save_state()
 endif
@@ -56,16 +50,6 @@ endif
 
 " for deoplete
 let g:python3_host_prog = expand('~/.pyenv/versions/3.7.0/bin/python')
-
-" for deoplete-clang
-" let g:deoplete#sources#clang#libclang_path = '/usr/lib/llvm-3.8/lib/libclang-3.8.so.1'
-" let g:deoplete#sources#clang#clang_header = '/usr/include/clang'
-
-" for LanguageClient-neovim
-set hidden
-let g:LanguageClient_serverCommands = {
-            \ 'vue': ['vls'],
-            \ }
 
 augroup fileTypeIndent
     autocmd!

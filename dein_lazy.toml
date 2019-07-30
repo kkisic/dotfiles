@@ -1,11 +1,11 @@
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_source = 'let g:deoplete#enable_at_startup = 1'
+on_i = 1
 
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
+repo = 'Shougo/denite.nvim'
+on_cmd = 'Denite'
 
 [[plugins]]
 repo = 'zchee/deoplete-clang'

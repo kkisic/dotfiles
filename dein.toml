@@ -6,9 +6,6 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-
-[[plugins]]
 repo = 'tpope/vim-surround'
 
 [[plugins]]
@@ -52,3 +49,22 @@ let g:closetag_close_shortcut = '<leader>>'
 [[plugins]]
 repo = 'miyakogi/seiya.vim'
 hook_add = 'let g:seiya_auto_enable = 1'
+
+[[plugins]]
+repo = 'autozimu/LanguageClient-neovim'
+rev = 'next'
+bhook_add = '''
+set hidden
+let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls']
+    \ }
+'''
+
+# for vim8
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+if = "!has('nvim')"
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+if = "!has('nvim')"
