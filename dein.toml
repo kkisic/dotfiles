@@ -20,7 +20,7 @@ nmap ga <Plug>(EasyAlign)
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
-depends = ['vim-airline_themes']
+depends = ['vim-airline-themes']
 hook_add = '''
 set laststatus=2
 let g:airline_powerline_fonts = 1
@@ -89,20 +89,17 @@ repo = 'miyakogi/seiya.vim'
 hook_add = 'let g:seiya_auto_enable = 1'
 
 [[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
+repo = 'neoclide/coc.nvim'
+if = '''executable('node') && executable('yarn')'''
+rev = 'release'
+merged = 0
 hook_add = '''
 set hidden
-let g:LanguageClient_serverCommands = {
-    \ 'cpp': ['clangd'],
-    \ 'vue': ['vls']
-    \ }
-augroup LanguageClient_config
-    autocmd!
-    autocmd User LanguageClientStarted setlocal signcolumn=yes
-    autocmd User LanguageClientStopped setlocal signcolumn=auto
-augroup END
+set signcolumn=yes
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 '''
 
 # for vim8

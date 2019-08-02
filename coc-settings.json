@@ -1,0 +1,28 @@
+{ 
+  "suggest.noselect":false,
+  "suggest.preferCompleteThanJumpPlaceholder":true,
+  "languageserver": {
+    "ccls": {
+      "command": "ccls",
+      "filetypes": ["c", "cpp", "objc", "objcpp"],
+      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+      "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        },
+        "clang": {
+          "resourceDir": "/usr/local/opt/llvm/Toolchains/LLVM8.0.0.xctoolchain/usr/lib/clang/8.0.0",
+          "extraArgs": [
+            "-isystem",
+            "/usr/local/opt/llvm/Toolchains/LLVM8.0.0.xctoolchain/usr/include/c++/v1"
+          ]
+        }
+      }
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  }
+}
