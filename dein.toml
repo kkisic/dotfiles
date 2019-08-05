@@ -73,6 +73,7 @@ hook_add = '''
 colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
+autocmd ColorScheme * highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE
 '''
 
 [[plugins]]

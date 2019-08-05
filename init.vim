@@ -9,7 +9,7 @@ set showmatch                 "対応する括弧のハイライト
 set autoindent                "前の行のインデントの継続
 set smartindent               "改行時に次のインデントの自動調整
 set expandtab                 "タブ文字を空白表示
-set tabstop=8                 "タブ文字の幅
+set tabstop=4                 "タブ文字の幅
 set shiftwidth=4              "オートインデントでずれる幅
 set softtabstop=4             "連続空白に対するTabやBsによる移動幅
 
