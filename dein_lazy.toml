@@ -24,6 +24,14 @@ repo = 'eagletmt/neco-ghc'
 on_ft = ['haskell']
 
 [[plugins]]
+repo = 'rust-lang/rust.vim'
+on_ft = ['rust']
+hook_add = '''
+let g:rustfmt_autosave = 1
+let g:rust_doc#define_map_K = 0
+'''
+
+[[plugins]]
 repo = 'gi1242/vim-tex-syntax'
 on_ft = ['plaintex']
 

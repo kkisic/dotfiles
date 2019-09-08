@@ -11,10 +11,20 @@
           "directory": "/tmp/ccls"
         },
         "clang": {
-          "resourceDir": "/usr/local/opt/llvm/Toolchains/LLVM8.0.0.xctoolchain/usr/lib/clang/8.0.0",
+          "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1",
           "extraArgs": [
+            "-c",
+            "-std=c++14",
+            "-Wall",
+            "-Wextra",
+            "-Wpedantic",
+            "-g",
+            "-Wno-keyword-macro",
+            "-Wno-unused-const-variable",
+            "-Wno-logical-op-parentheses",
             "-isystem",
-            "/usr/local/opt/llvm/Toolchains/LLVM8.0.0.xctoolchain/usr/include/c++/v1"
+            "/Library/Developer/CommandLineTools/usr/include/c++/v1",
+            "--with-gxx-include-dir=/usr/include/c++/4.2.1"
           ]
         }
       }
