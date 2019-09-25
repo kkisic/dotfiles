@@ -63,6 +63,7 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.vue  setlocal softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.html setlocal softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.json setlocal softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.go   setlocal noexpandtab
 augroup END
 
 filetype plugin indent on
