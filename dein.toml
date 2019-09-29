@@ -1,8 +1,12 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
-hook_source = '''
-let g:python3_host_prog = expand('~/.pyenv/versions/3.7.0/bin/python3')
-'''
+
+[[plugins]]
+repo = 'neoclide/coc.nvim'
+if = '''executable('node') && executable('yarn')'''
+rev = 'release'
+merged = 0
+hook_add = 'source ~/.config/nvim/plugins/coc.rc.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
@@ -91,20 +95,6 @@ let g:closetag_close_shortcut = '<leader>>'
 [[plugins]]
 repo = 'miyakogi/seiya.vim'
 hook_add = 'let g:seiya_auto_enable = 1'
-
-[[plugins]]
-repo = 'neoclide/coc.nvim'
-if = '''executable('node') && executable('yarn')'''
-rev = 'release'
-merged = 0
-hook_add = '''
-set hidden
-set signcolumn=yes
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-'''
 
 # for vim8
 [[plugins]]

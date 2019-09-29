@@ -24,6 +24,7 @@ set backupdir=~/.vim/backup
 noremap <BS> <Nop>
 inoremap <BS> <Nop>
 
+
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.vim/dein')
 " dein.vim 本体
@@ -55,6 +56,8 @@ endif
 if dein#check_install()
     call dein#install()
 endif
+
+let g:python3_host_prog = expand('~/.pyenv/versions/3.7.0/bin/python3')
 
 augroup fileTypeIndent
     autocmd!
