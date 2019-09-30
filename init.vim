@@ -13,6 +13,9 @@ set tabstop=4                 "タブ文字の幅
 set shiftwidth=4              "オートインデントでずれる幅
 set softtabstop=4             "連続空白に対するTabやBsによる移動幅
 
+set splitbelow                "splitで下に開く
+set splitright                "vsplitで右に開く
+
 set encoding=utf-8
 set clipboard=unnamedplus
 
