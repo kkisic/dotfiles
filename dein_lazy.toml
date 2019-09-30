@@ -9,6 +9,11 @@ on_cmd = 'Defx'
 hook_add = 'source ~/.config/nvim/plugins/defx.rc.vim'
 
 [[plugins]]
+repo = 'Shougo/deol.nvim'
+on_cmd = 'Deol'
+hook_add = 'source ~/.config/nvim/plugins/deol.rc.vim'
+
+[[plugins]]
 repo = 'posva/vim-vue'
 on_ft = ['vue']
 

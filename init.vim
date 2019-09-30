@@ -19,6 +19,10 @@ set splitright                "vsplitで右に開く
 set encoding=utf-8
 set clipboard=unnamedplus
 
+set termguicolors
+set pumblend=10
+set winblend=10
+
 set swapfile
 set directory=~/.vim/swap
 set backup
