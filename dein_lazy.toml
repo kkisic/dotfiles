@@ -1,7 +1,19 @@
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 on_cmd = 'Denite'
-hook_source = 'source ~/.config/nvim/plugins/denite.rc.vim'
+hook_add = 'source ~/.config/nvim/plugins/denite.rc.vim'
+hook_source ='''
+let s:denite_win_width_percent = 0.85
+let s:denite_win_height_percent = 0.7
+" Change denite default options
+call denite#custom#option('default', {
+        \ 'split': 'floating',
+        \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
+        \ 'wincol': float2nr((&columns - (&columns * s:denite_win_width_percent)) / 2),
+        \ 'winheight': float2nr(&lines * s:denite_win_height_percent),
+        \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
+        \ })
+'''
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'
