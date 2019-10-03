@@ -1,5 +1,5 @@
 nnoremap <silent> <Space>f
-            \ :<C-u>Defx -toggle -listed -resume -buffer-name=tab`tabpagenr()` -split=vertical -direction=topleft -winwidth=35<CR>
+            \ :<C-u>Defx<CR>
 
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
