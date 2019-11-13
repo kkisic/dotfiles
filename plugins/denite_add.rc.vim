@@ -1,6 +1,6 @@
 " Define Denite commands
 noremap <silent> <Space>d :Denite buffer<CR>
-noremap <silent> <Space>df :Denite file/rec<CR>
+noremap <silent> <Space>r :Denite file/rec<CR>
 
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort

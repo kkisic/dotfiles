@@ -63,6 +63,10 @@ repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
 [[plugins]]
+repo = 'tpope/vim-markdown'
+on_ft = ['markdown']
+
+[[plugins]]
 repo = 'iamcco/markdown-preview.nvim'
 on_ft = ['markdown', 'pandoc.markdown', 'rwd']
 build = 'cd app & yarn install'
