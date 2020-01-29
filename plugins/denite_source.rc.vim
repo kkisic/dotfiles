@@ -14,5 +14,5 @@ call denite#custom#var('file/rec', 'command', ['ag', '--follow', '--nocolor', '-
 call denite#custom#var('grep', 'command', ['ag'])
 call denite#custom#var('grep', 'recursive_opts', [])
 call denite#custom#var('grep', 'pattern_opt', [])
-call denite#custom#var('grep', 'default_opts', ['--follow', '--no-group', '--no-color'])
+call denite#custom#var('grep', 'default_opts', ['--follow', '--nogroup', '--nocolor'])
 call denite#custom#source('file/rec', 'matchers', ['matcher/cpsm'])
