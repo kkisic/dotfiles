@@ -1,8 +1,14 @@
 nnoremap <silent> <Space>f
             \ :<C-u>Defx<CR>
 
+let g:defx_icons_enable_syntax_highlight = 1
+let g:defx_icons_column_length = 2
+
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
+    "set nocursorline
+    "highlight Cursor cterm=NONE ctermfg=NONE ctermbg=NONE gui=NONE
+    "highlight CursorLine cterm=NONE ctermfg=black ctermbg=white gui=reverse
     " Define mappings
     nnoremap <silent><buffer><expr> <CR>
                 \ defx#do_action('drop')
@@ -66,3 +72,4 @@ function! s:defx_my_settings() abort
     nnoremap <silent><buffer><expr> cd
                 \ defx#do_action('change_vim_cwd')
 endfunction
+

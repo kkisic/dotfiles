@@ -76,6 +76,13 @@ let g:closetag_close_shortcut = '<leader>>'
 repo = 'miyakogi/seiya.vim'
 hook_add = 'let g:seiya_auto_enable = 1'
 
+# for defx, need to be installed 'github.com/ryanoasis/nerd-fonts' and use 'NERD FONT'
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
 # for vim8
 [[plugins]]
 repo = 'roxma/nvim-yarp'

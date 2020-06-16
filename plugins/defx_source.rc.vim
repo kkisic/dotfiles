@@ -8,4 +8,5 @@ call defx#custom#option('_', {
             \ 'resume': 1,
             \ 'listed': 1,
             \ 'toggle': 1,
+            \ 'columns': 'icons:indent:filename:type',
             \ })

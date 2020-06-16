@@ -6,6 +6,7 @@ hook_source ='source ~/.config/nvim/plugins/denite_source.rc.vim'
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'
+depends = ['defx-icons']
 on_cmd = 'Defx'
 hook_add = 'source ~/.config/nvim/plugins/defx_add.rc.vim'
 hook_source = 'source ~/.config/nvim/plugins/defx_source.rc.vim'
