@@ -16,14 +16,8 @@ alias vim='nvim'
 alias vi='nvim'
 
 # git completion
-if [ "$(uname -a)" = "Darwin" ]
-then
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
-else
 source ~/.git-completion.bash
 source ~/.git-prompt.sh
-fi
 GIT_PS1_SHOWDIRTYSTATE=true
 
 # mysql
@@ -45,9 +39,9 @@ export LSCOLORS="GxFxCxDxBxegedabagaced"
 # nrf - ble
 if [ "$(uname -a)" = "Darwin" ]
 then
-export NRFSDK12_ROOT=/Users/`whoami`/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
+    export NRFSDK12_ROOT=/Users/`whoami`/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
 else
-export NRFSDK12_ROOT=~/Dropbox/git_local/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
+    export NRFSDK12_ROOT=~/Dropbox/git_local/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
 fi
 export GNU_BD="/opt/gnuarm/gcc-arm-none-eabi-7-2017-q4-major"
 export PATH=$PATH:${GNU_BD}/bin
@@ -70,32 +64,32 @@ export EDITOR="nvim"
 # direnv
 if type direnv > /dev/null 2>&1;
 then
-eval "$(direnv hook bash)"
+    eval "$(direnv hook bash)"
 fi
 
 # prompt
 if [ "$(uname -a)" = "Darwin" ]
 then
-export PS1="\[\e[1;32m\](\u):\w\n\[\e[1;36m\]\$(__git_ps1 [%s])\[\e[1;32m\]\$ \[\e[00m\]"
+    export PS1="\[\e[1;32m\](\u):\w\n\[\e[1;36m\]\$(__git_ps1 [%s])\[\e[1;32m\]\$ \[\e[00m\]"
 else
-export PS1='\[\e[1;32m\](\u)@\h:\w\n\[\e[1;36m\]$(__git_ps1 [%s])\[\e[1;32m\]\$ \[\e[00m\]'
+    export PS1='\[\e[1;32m\](\u)@\h:\w\n\[\e[1;36m\]$(__git_ps1 [%s])\[\e[1;32m\]\$ \[\e[00m\]'
 fi
 
 ## kubectl
 if type kubectl > /dev/null 2>&1;
 then
-source /usr/local/etc/bash_completion
-source <(kubectl completion bash)
-alias k=kubectl
-complete -o default -F __start_kubectl k
+    source /usr/local/etc/bash_completion
+    source <(kubectl completion bash)
+    alias k=kubectl
+    complete -o default -F __start_kubectl k
 fi
 
 # kube-ps1
 kube_ps1="/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 if [ -f ${kube_ps1} ]
 then
-source ${kube_ps1}
-export PS1='$(kube_ps1) '$PS1
+    source ${kube_ps1}
+    export PS1='$(kube_ps1) '$PS1
 fi
 #source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 
