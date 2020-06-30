@@ -15,13 +15,14 @@ clean-nvim:
 	rm ~/.config/nvim
 
 setup-git:
-	echo $(shell pwd)
 	ln -s $(shell pwd)/git/.gitconfig ~/.gitconfig
+	ln -s $(shell pwd)/git/.gitignore_global ~/.gitignore_global
 	ln -s $(shell pwd)/git/.git-completion.bash ~/.git-completion.bash
 	ln -s $(shell pwd)/git/.git-prompt.sh ~/.git-prompt.sh
 
 clean-git:
 	rm ~/.gitconfig
+	rm ~/.gitignore_global
 	rm ~/.git-completion.bash
 	rm ~/.git-prompt.sh
 
