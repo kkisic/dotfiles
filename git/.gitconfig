@@ -1,0 +1,5 @@
+[user]
+	name = kkisic
+	email = amareamo.pxhxc@gmail.com
+[core]
+	editor = nvim -c \"set fenc=utf-8\"
