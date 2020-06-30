@@ -37,8 +37,7 @@ export CLICOLOR=1
 export LSCOLORS="GxFxCxDxBxegedabagaced"
 
 # nrf - ble
-if [ "$(uname -a)" = "Darwin" ]
-then
+if [ "$(uname)" = "Darwin" ] ; then
     export NRFSDK12_ROOT=/Users/`whoami`/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
 else
     export NRFSDK12_ROOT=~/Dropbox/git_local/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
@@ -62,22 +61,19 @@ export PATH=$HOME/sh:$PATH
 export EDITOR="nvim"
 
 # direnv
-if type direnv > /dev/null 2>&1;
-then
+if type direnv > /dev/null 2>&1; then
     eval "$(direnv hook bash)"
 fi
 
 # prompt
-if [ "$(uname -a)" = "Darwin" ]
-then
+if [ "$(uname)" = "Darwin" ] ; then
     export PS1="\[\e[1;32m\](\u):\w\n\[\e[1;36m\]\$(__git_ps1 [%s])\[\e[1;32m\]\$ \[\e[00m\]"
 else
     export PS1='\[\e[1;32m\](\u)@\h:\w\n\[\e[1;36m\]$(__git_ps1 [%s])\[\e[1;32m\]\$ \[\e[00m\]'
 fi
 
-## kubectl
-if type kubectl > /dev/null 2>&1;
-then
+# kubectl
+if type kubectl > /dev/null 2>&1; then
     source /usr/local/etc/bash_completion
     source <(kubectl completion bash)
     alias k=kubectl
@@ -86,17 +82,12 @@ fi
 
 # kube-ps1
 kube_ps1="/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-if [ -f ${kube_ps1} ]
-then
+if [ -f ${kube_ps1} ] ; then
     source ${kube_ps1}
     export PS1='$(kube_ps1) '$PS1
 fi
-#source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-
-# for sd-oor
-export SD_OOR_SILENCE_DURATION_OPT='-v+1H'
 
 # for login function
-if [ -f ~/.login_func ] ; then
-    . ~/.login_func
+if [ -f ~/.internal_bashrc ] ; then
+    . ~/.internal_bashrc
 fi
