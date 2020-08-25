@@ -1,8 +1,8 @@
 " Define Denite commands
-noremap <silent> <Space>d :Denite buffer<CR>
-noremap <silent> <Space>r :Denite file/rec<CR>
-noremap <silent> <Space>g :Denite grep<CR>
-noremap <silent> <Space>s :Denite -resume<CR>
+noremap <silent> <leader>d :Denite buffer<CR>
+noremap <silent> <leader>r :Denite file/rec<CR>
+noremap <silent> <leader>g :Denite grep<CR>
+noremap <silent> <leader>s :Denite -resume<CR>
 
 autocmd FileType denite call s:denite_my_settings()
 function! s:denite_my_settings() abort

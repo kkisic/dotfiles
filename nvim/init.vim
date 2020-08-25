@@ -28,9 +28,12 @@ set directory=~/.vim/swap
 set backup
 set backupdir=~/.vim/backup
 
+let mapleader = "\<Space>"
+
 noremap <BS> <Nop>
 inoremap <BS> <Nop>
 
+noremap <silent> <leader>ch :CheckHealth<CR>
 
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.vim/dein')

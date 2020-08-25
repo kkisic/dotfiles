@@ -1,5 +1,5 @@
-nnoremap <silent> <Space>f
-            \ :<C-u>Defx<CR>
+" Define Defx commands
+nnoremap <silent> <leader>f :<C-u>Defx<CR>
 
 let g:defx_icons_enable_syntax_highlight = 1
 let g:defx_icons_column_length = 2
