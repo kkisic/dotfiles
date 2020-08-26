@@ -33,7 +33,7 @@ let mapleader = "\<Space>"
 noremap <BS> <Nop>
 inoremap <BS> <Nop>
 
-noremap <silent> <leader>ch :CheckHealth<CR>
+noremap <silent> <leader>ch :checkhealth<CR>
 
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.vim/dein')
