@@ -9,10 +9,15 @@ clean: \
 	clean-tmux
 
 setup-nvim:
-	ln -s $(shell pwd)/nvim ~/.config
+	mkdir -p ~/.config/coc/extensions
+	ln -s $(shell pwd)/nvim ~/.config/nvim
+	ln -s $(shell pwd)/nvim/package.json ~/.config/coc/extensions/package.json
+	npm i --prefix "~/.config/coc/extensions/"
 
 clean-nvim:
 	rm ~/.config/nvim
+	rm -rf ~/.config/coc
+	
 
 setup-git:
 	ln -s $(shell pwd)/git/.gitconfig ~/.gitconfig

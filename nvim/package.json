@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "coc-css": ">=1.2.4",
+    "coc-html": ">=1.2.4",
+    "coc-json": ">=1.2.6",
+    "coc-rust-analyzer": ">=0.7.15",
+    "coc-tsserver": ">=1.5.5",
+    "coc-vetur": ">=1.1.12",
+    "coc-vimlsp": ">=0.10.1",
+    "coc-yaml": ">=1.0.5"
+  }
+}
