@@ -83,6 +83,9 @@ repo = 'kristijanhusak/defx-icons'
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
+hook_add = '''
+set guifont=DroidSansMono\ Nerd\ Font\ 12
+'''
 
 # for vim8
 [[plugins]]
