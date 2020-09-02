@@ -12,11 +12,12 @@ setup-nvim:
 	mkdir -p ~/.config/coc/extensions
 	ln -s $(shell pwd)/nvim ~/.config/nvim
 	ln -s $(shell pwd)/nvim/package.json ~/.config/coc/extensions/package.json
-	npm i --prefix "~/.config/coc/extensions/"
+	npm i --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod --prefix "~/.config/coc/extensions/"
 
 clean-nvim:
 	rm ~/.config/nvim
-	rm -rf ~/.config/coc
+	rm -rf ~/.config/coc/extensions/package.json
+	rm -rf ~/.config/coc/extensions/node_modules
 	
 
 setup-git:
