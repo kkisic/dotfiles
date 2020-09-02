@@ -27,3 +27,16 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Remap for rename current word
 nmap <silent> <leader>rn <Plug>(coc-rename)
+
+let g:coc_global_extensions = [
+            \ 'coc-css',
+            \ 'coc-go',
+            \ 'coc-html',
+            \ 'coc-json',
+            \ 'coc-rust-analyzer',
+            \ 'coc-sh',
+            \ 'coc-tsserver',
+            \ 'coc-vetur',
+            \ 'coc-vimlsp',
+            \ 'coc-yaml',
+            \ ]
