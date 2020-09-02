@@ -69,6 +69,10 @@ endif
 
 let g:python3_host_prog = expand('~/.pyenv/versions/3.7.0/bin/python3')
 
+" update plugins
+let g:dein#install_github_api_token = $VIM_GITHUB_TOKEN
+command! -nargs=0 Update call dein#check_update(v:true)
+
 augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.hs   setlocal softtabstop=2 shiftwidth=2

@@ -71,3 +71,13 @@ on_ft = ['markdown']
 repo = 'iamcco/markdown-preview.nvim'
 on_ft = ['markdown', 'pandoc.markdown', 'rwd']
 build = 'cd app & yarn install'
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = ['html', 'xml', 'vue']
+hook_add = '''
+let g:closetag_filenames = '*.html,*.xml,*.vue'
+let g:closetag_emptyTags_caseSensitive = 1
+let g:closetag_shortcut = '>'
+let g:closetag_close_shortcut = '<leader>>'
+'''

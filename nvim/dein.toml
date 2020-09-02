@@ -65,15 +65,6 @@ autocmd ColorScheme * highlight Visual     cterm=reverse gui=reverse
 '''
 
 [[plugins]]
-repo = 'alvan/vim-closetag'
-hook_add = '''
-let g:closetag_filenames = '*.html,*.xml,*.vue'
-let g:closetag_emptyTags_caseSensitive = 1
-let g:closetag_shortcut = '>'
-let g:closetag_close_shortcut = '<leader>>'
-'''
-
-[[plugins]]
 repo = 'miyakogi/seiya.vim'
 hook_add = 'let g:seiya_auto_enable = 1'
 
