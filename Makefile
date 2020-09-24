@@ -15,7 +15,6 @@ setup-nvim:
 clean-nvim:
 	rm ~/.config/nvim
 	rm -rf ~/.config/coc/extensions/node_modules
-	
 
 setup-git:
 	ln -s $(shell pwd)/git/.gitconfig ~/.gitconfig
@@ -34,3 +33,9 @@ setup-tmux:
 
 clean-tmux:
 	rm ~/.tmux.conf
+
+setup-peco:
+	ln -s $(shell pwd)/peco ~/.peco
+
+clean-peco:
+	rm ~/.peco
