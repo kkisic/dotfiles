@@ -81,6 +81,10 @@ if type kubectl > /dev/null 2>&1; then
     complete -o default -F __start_kubectl k
 fi
 
+# krew
+# show https://krew.sigs.k8s.io/docs/user-guide/setup/install/
+export PATH=$HOME/.krew/bin:$PATH
+
 # kube-ps1
 kube_ps1="/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 if [ -f ${kube_ps1} ] ; then
