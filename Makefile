@@ -1,12 +1,14 @@
 setup: \
 	setup-nvim \
 	setup-git \
-	setup-tmux
+	setup-tmux \
+	setup-peco
 
 clean: \
 	clean-nvim \
 	clean-git \
-	clean-tmux
+	clean-tmux \
+	clean-peco
 
 setup-nvim:
 	mkdir -p ~/.config/coc/extensions
