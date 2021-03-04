@@ -12,6 +12,8 @@ alias ghci='stack ghci'
 alias runhaskell='stack runhaskell'
 
 # nvim
+export EDITOR="nvim"
+export PATH=$XDG_CONFIG_HOME/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin:$PATH
 alias vim='nvim'
 alias vi='nvim'
 alias vimdiff='nvim -d'
@@ -57,9 +59,6 @@ export PATH=$HOME/.cargo/bin:$PATH
 
 # ~/sh
 export PATH=$HOME/sh:$PATH
-
-# neovim
-export EDITOR="nvim"
 
 # direnv
 if type direnv > /dev/null 2>&1; then
