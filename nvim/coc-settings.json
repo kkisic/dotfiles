@@ -1,31 +1,22 @@
-{ 
+{
   "suggest.noselect":false,
   "suggest.preferCompleteThanJumpPlaceholder":true,
   "languageserver": {
-    "ccls": {
-      "command": "ccls",
-      "filetypes": ["c", "cpp", "objc", "objcpp"],
-      "rootPatterns": [".ccls", "compile_commands.json", ".vim/", ".git/", ".hg/"],
+    "haskell": {
+      "command": "hie-wrapper",
+      "rootPatterns": [
+        ".stack.yaml",
+        "cabal.config",
+        "package.yaml"
+      ],
+      "filetypes": [
+        "hs",
+        "lhs",
+        "haskell"
+      ],
       "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/ccls"
-        },
-        "clang": {
-          "resourceDir": "/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1",
-          "extraArgs": [
-            "-c",
-            "-std=c++14",
-            "-Wall",
-            "-Wextra",
-            "-Wpedantic",
-            "-g",
-            "-Wno-keyword-macro",
-            "-Wno-unused-const-variable",
-            "-Wno-logical-op-parentheses",
-            "-isystem",
-            "/Library/Developer/CommandLineTools/usr/include/c++/v1",
-            "--with-gxx-include-dir=/usr/include/c++/4.2.1"
-          ]
+        "languageServerHaskell": {
+          "hlint": true
         }
       }
     }
