@@ -104,8 +104,9 @@ function ghql() {
   fi
 }
 
-bind -x '"\201": ghql'
-bind '"\C-g":"\201\C-m"'
+#bind -x '"\201": ghql'
+#bind '"\C-g":"\201\C-m"'
+bind '"\C-g":"ghql\C-m"'
 
 # for login function
 if [ -f ~/.internal_bashrc ] ; then
