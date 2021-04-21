@@ -1,3 +1,9 @@
+# setup
+# Add the following to ~/.bashrc
+# if [ -f path/to/dir/dotfiles/bash/.bashrc ] ; then
+#     . path/to/dir/dotfiles/bash/.bashrc
+# fi
+
 export PATH=~/.local/bin:$PATH
 export XDG_CONFIG_HOME=$HOME/.config
 
@@ -35,6 +41,11 @@ eval "$(pyenv init -)"
 export GOPATH=$HOME/go
 export GO111MODULE=on
 export PATH=$PATH:$GOPATH/bin
+
+# deno
+# https://deno.land/#installation
+export DENO_INSTALL="~/.deno"
+export PATH=$PATH:$DENO_INSTALL/bin
 
 export CLICOLOR=1
 export LSCOLORS="GxFxCxDxBxegedabagaced"
