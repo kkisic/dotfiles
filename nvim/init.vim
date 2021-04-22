@@ -84,6 +84,7 @@ augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.hs   setlocal softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.js   setlocal softtabstop=2 shiftwidth=2
+    autocmd BufNewFile,BufRead *.ts   setlocal softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.vue  setlocal softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.html setlocal softtabstop=2 shiftwidth=2
     autocmd BufNewFile,BufRead *.json setlocal softtabstop=2 shiftwidth=2
