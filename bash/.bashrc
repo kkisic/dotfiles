@@ -1,5 +1,5 @@
 # setup
-# Add the following to ~/.bashrc
+# Add the following to ~/.bash_profile or ~/.bashrc
 # if [ -f path/to/dir/dotfiles/bash/.bashrc ] ; then
 #     . path/to/dir/dotfiles/bash/.bashrc
 # fi
@@ -11,6 +11,12 @@ stty stop undef
 if [ $SHLVL = 1 ]; then
     tmux
 fi
+
+# ls
+export CLICOLOR=1
+export LSCOLORS="GxFxCxDxBxegedabagaced"
+alias ll='ls -l'
+alias la='ls -la'
 
 # haskell
 alias ghc='stack ghc'
@@ -32,10 +38,10 @@ GIT_PS1_SHOWDIRTYSTATE=true
 # mysql
 export PATH=/usr/local/mysql/bin:$PATH
 
-# python
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
+# asdf
+if type asdf > /dev/null 2>&1; then
+    . $HOME/.asdf/asdf.sh
+fi
 
 # go
 export GOPATH=$HOME/go
@@ -46,24 +52,6 @@ export PATH=$PATH:$GOPATH/bin
 # https://deno.land/#installation
 export DENO_INSTALL="~/.deno"
 export PATH=$PATH:$DENO_INSTALL/bin
-
-export CLICOLOR=1
-export LSCOLORS="GxFxCxDxBxegedabagaced"
-
-# nrf - ble
-if [ "$(uname)" = "Darwin" ] ; then
-    export NRFSDK12_ROOT=/Users/`whoami`/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
-else
-    export NRFSDK12_ROOT=~/Dropbox/git_local/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
-fi
-export GNU_BD="/opt/gnuarm/gcc-arm-none-eabi-7-2017-q4-major"
-export PATH=$PATH:${GNU_BD}/bin
-
-# arm-none-eabi-gcc
-# export PATH=$PATH:/usr/lib/gcc/gcc-arm-none-eabi-7-2017-q4-majo
-
-# llvm
-# export PATH="/usr/local/opt/llvm/bin:$PATH"
 
 # rust
 export PATH=$HOME/.cargo/bin:$PATH
@@ -85,7 +73,8 @@ fi
 
 # kubectl
 if type kubectl > /dev/null 2>&1; then
-    source /usr/local/etc/bash_completion
+    # need bash-completion
+    source $(brew --prefix)/etc/bash_completion
     source <(kubectl completion bash)
     alias k=kubectl
     complete -o default -F __start_kubectl k
@@ -102,6 +91,9 @@ if [ -f ${kube_ps1} ] ; then
     export PS1='$(kube_ps1) '$PS1
 fi
 
+# hide zsh message for mac
+export BASH_SILENCE_DEPRECATION_WARNING=1
+
 # for ghq & peco
 function ghql() {
   local selected_file=$(ghq list --full-path | peco --query "$LBUFFER")
@@ -114,9 +106,19 @@ function ghql() {
   fi
 }
 
-#bind -x '"\201": ghql'
-#bind '"\C-g":"\201\C-m"'
 bind '"\C-g":"ghql\C-m"'
+
+# nrf - ble
+if [ "$(uname)" = "Darwin" ] ; then
+    export NRFSDK12_ROOT=/Users/`whoami`/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
+else
+    export NRFSDK12_ROOT=~/Dropbox/git_local/qmk_firmware/nRF5_SDK_12.3.0_d7731ad
+fi
+export GNU_BD="/opt/gnuarm/gcc-arm-none-eabi-7-2017-q4-major"
+export PATH=$PATH:${GNU_BD}/bin
+
+# arm-none-eabi-gcc
+# export PATH=$PATH:/usr/lib/gcc/gcc-arm-none-eabi-7-2017-q4-majo
 
 # for login function
 if [ -f ~/.internal_bashrc ] ; then

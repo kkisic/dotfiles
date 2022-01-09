@@ -2,13 +2,15 @@ setup: \
 	setup-nvim \
 	setup-git \
 	setup-tmux \
-	setup-peco
+	setup-peco \
+	setup-asdf
 
 clean: \
 	clean-nvim \
 	clean-git \
 	clean-tmux \
-	clean-peco
+	clean-peco \
+	clean-asdf
 
 setup-nvim:
 	mkdir -p ~/.config/coc/extensions
@@ -41,3 +43,9 @@ setup-peco:
 
 clean-peco:
 	rm ~/.peco
+
+setup-asdf:
+	ln -s $(shell pwd)/asdf/.tool-versions  ~/.tool-versions
+
+clean-asdf:
+	rm ~/.tool-versions

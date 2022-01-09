@@ -74,7 +74,7 @@ if dein#check_install()
     call dein#install()
 endif
 
-let g:python3_host_prog = expand('~/.pyenv/versions/3.7.0/bin/python3')
+let g:python3_host_prog = substitute(system('which python3'), "\n", "", "g")
 
 " update plugins
 let g:dein#install_github_api_token = $VIM_GITHUB_TOKEN

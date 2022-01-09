@@ -56,7 +56,6 @@ let g:rainbow_conf = {
 [[plugins]]
 repo = 'tomasr/molokai'
 hook_add='''
-colorscheme molokai
 let g:molokai_original = 1
 let g:rehash256 = 1
 autocmd ColorScheme * highlight CursorLine cterm=underline ctermfg=NONE ctermbg=NONE gui=underline guibg=NONE
@@ -65,6 +64,7 @@ autocmd ColorScheme * highlight LineNr     ctermbg=NONE guibg=NONE
 autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
 autocmd ColorScheme * highlight Comment    ctermfg=81 guifg=#66D9EF
 autocmd ColorScheme * highlight Visual     cterm=reverse gui=reverse
+colorscheme molokai
 '''
 
 [[plugins]]
