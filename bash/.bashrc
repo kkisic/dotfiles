@@ -18,11 +18,6 @@ export LSCOLORS="GxFxCxDxBxegedabagaced"
 alias ll='ls -l'
 alias la='ls -la'
 
-# haskell
-alias ghc='stack ghc'
-alias ghci='stack ghci'
-alias runhaskell='stack runhaskell'
-
 # nvim
 export EDITOR="nvim"
 export PATH=$XDG_CONFIG_HOME/coc/extensions/coc-clangd-data/install/11.0.0/clangd_11.0.0/bin:$PATH
@@ -39,7 +34,7 @@ GIT_PS1_SHOWDIRTYSTATE=true
 export PATH=/usr/local/mysql/bin:$PATH
 
 # asdf
-if type asdf > /dev/null 2>&1; then
+if [ -f $HOME/.asdf/asdf.sh ] ; then
     . $HOME/.asdf/asdf.sh
 fi
 
@@ -47,6 +42,11 @@ fi
 export GOPATH=$HOME/go
 export GO111MODULE=on
 export PATH=$PATH:$GOPATH/bin
+
+# haskell
+alias ghc='stack ghc'
+alias ghci='stack ghci'
+alias runhaskell='stack runhaskell'
 
 # deno
 # https://deno.land/#installation
@@ -73,7 +73,7 @@ fi
 
 # kubectl
 if type kubectl > /dev/null 2>&1; then
-    # need bash-completion
+    # bash-completion is needed
     source $(brew --prefix)/etc/bash_completion
     source <(kubectl completion bash)
     alias k=kubectl
