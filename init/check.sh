@@ -4,6 +4,7 @@ TARGET=(
     "ag"
     "asdf"
     "deno"
+    "cmake"
     "direnv"
     "docker"
     "ghq"

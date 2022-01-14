@@ -16,15 +16,26 @@ repo = 'Shougo/vimproc.vim'
 build = 'make'
 
 [[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+merged = 0
+hook_add = '''
+lua <<EOF
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    disable = {
+    }
+  },
+  ensure_installed = 'maintained'
+}
+EOF
+'''
+
+[[plugins]]
 repo = 'tpope/vim-fugitive'
 
 [[plugins]]
 repo = 'tpope/vim-surround'
-
-# for matcher_cpsm, Need 'brew install boost' in macos
-[[plugins]]
-repo = 'nixprime/cpsm'
-build = 'env PY3=ON ./install.sh'
 
 [[plugins]]
 repo = 'junegunn/vim-easy-align'
@@ -64,6 +75,7 @@ autocmd ColorScheme * highlight LineNr     ctermbg=NONE guibg=NONE
 autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
 autocmd ColorScheme * highlight Comment    ctermfg=81 guifg=#66D9EF
 autocmd ColorScheme * highlight Visual     cterm=reverse gui=reverse
+autocmd ColorScheme * highlight Delimiter  ctermfg=NONE guifg=NONE
 colorscheme molokai
 '''
 

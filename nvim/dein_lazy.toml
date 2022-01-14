@@ -38,6 +38,13 @@ repo = 'eagletmt/neco-ghc'
 on_ft = ['haskell']
 
 [[plugins]]
+repo = 'mattn/vim-goimports'
+on_ft = ['go']
+hook_add = '''
+let g:goimports_simplify = 1
+'''
+
+[[plugins]]
 repo = 'rust-lang/rust.vim'
 on_ft = ['rust']
 hook_add = '''
@@ -46,26 +53,8 @@ let g:rust_doc#define_map_K = 0
 '''
 
 [[plugins]]
-repo = 'fatih/vim-go'
-on_ft = ['go']
-hook_add = '''
-let g:go_fmt_command = "goimports"
-let g:go_fmt_fail_silently = 1
-let g:go_def_mapping_enabled = 0
-let g:go_doc_keywordprg_enabled = 0
-'''
-
-[[plugins]]
 repo = 'gi1242/vim-tex-syntax'
 on_ft = ['plaintex']
-
-[[plugins]]
-repo = 'cespare/vim-toml'
-on_ft = ['toml']
-
-[[plugins]]
-repo = 'tpope/vim-markdown'
-on_ft = ['markdown']
 
 [[plugins]]
 repo = 'iamcco/markdown-preview.nvim'
@@ -81,7 +70,3 @@ let g:closetag_emptyTags_caseSensitive = 1
 let g:closetag_shortcut = '>'
 let g:closetag_close_shortcut = '<leader>>'
 '''
-
-[[plugins]]
-repo = 'maxmellon/vim-jsx-pretty'
-on_ft = ['javascript', 'javascript.jsx']
