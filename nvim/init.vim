@@ -93,3 +93,6 @@ augroup END
 
 filetype plugin indent on
 syntax enable
+
+" nvim-treesitter
+lua require('treesitter_config')
