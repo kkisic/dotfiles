@@ -48,11 +48,6 @@ alias ghc='stack ghc'
 alias ghci='stack ghci'
 alias runhaskell='stack runhaskell'
 
-# deno
-# https://deno.land/#installation
-export DENO_INSTALL="~/.deno"
-export PATH=$PATH:$DENO_INSTALL/bin
-
 # rust
 export PATH=$HOME/.cargo/bin:$PATH
 

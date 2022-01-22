@@ -35,7 +35,7 @@ inoremap <BS> <Nop>
 
 noremap <silent> <leader>ch :checkhealth<CR>
 
-set runtimepath^=~/work/deno/harrow.vim
+"set runtimepath^=~/work/deno/harrow.vim
 let g:denops#server#service#deno_agrs = [
     \ '-q',
     \ '--unstable',
