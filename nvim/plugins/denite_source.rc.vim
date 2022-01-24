@@ -1,13 +1,17 @@
-let s:denite_win_width_percent = 0.85
-let s:denite_win_height_percent = 0.7
+let s:floating_win_width_ratio = 0.88
+let s:floating_win_height_ratio = 0.85
 
 " Change denite default options
 call denite#custom#option('default', {
             \ 'split': 'floating',
-            \ 'winwidth': float2nr(&columns * s:denite_win_width_percent),
-            \ 'wincol': float2nr((&columns - (&columns * s:denite_win_width_percent)) / 2),
-            \ 'winheight': float2nr(&lines * s:denite_win_height_percent),
-            \ 'winrow': float2nr((&lines - (&lines * s:denite_win_height_percent)) / 2),
+            \ 'winwidth': float2nr(&columns * s:floating_win_width_ratio / 2),
+            \ 'wincol': float2nr((&columns - (&columns * s:floating_win_width_ratio)) / 2),
+            \ 'winheight': float2nr(&lines * s:floating_win_height_ratio),
+            \ 'winrow': float2nr((&lines - (&lines * s:floating_win_height_ratio)) / 2),
+            \ 'floating_preview': v:true,
+            \ 'vertical_preview': v:true,
+            \ 'preview_height': float2nr(&lines * s:floating_win_height_ratio),
+            \ 'preview_width': float2nr(&columns * s:floating_win_width_ratio / 2),
             \ 'highlight_matched_char': 'None',
             \ 'highlight_matched_range': 'Search',
             \ 'match_highlight': v:true,
