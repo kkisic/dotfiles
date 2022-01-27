@@ -44,6 +44,9 @@ let g:airline_theme = 'wombat'
 '''
 
 [[plugins]]
+repo = 'lukas-reineke/indent-blankline.nvim'
+
+[[plugins]]
 repo = 'luochen1990/rainbow'
 hook_add = '''
 let g:rainbow_active = 1
@@ -71,7 +74,7 @@ colorscheme molokai
 repo = 'miyakogi/seiya.vim'
 hook_add = 'let g:seiya_auto_enable = 1'
 
-# for defx, need to be installed 'github.com/ryanoasis/nerd-fonts' and use 'NERD FONT'
+# for defx, need 'github.com/ryanoasis/nerd-fonts' and use 'NERD FONT'
 [[plugins]]
 repo = 'kristijanhusak/defx-icons'
 
