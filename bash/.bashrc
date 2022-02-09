@@ -12,6 +12,9 @@ if [ $SHLVL = 1 ]; then
     tmux
 fi
 
+# tmux
+alias tmux_reload='tmux source-file ~/.tmux.conf'
+
 # ls
 export CLICOLOR=1
 export LSCOLORS="GxFxCxDxBxegedabagaced"
@@ -32,6 +35,7 @@ GIT_PS1_SHOWDIRTYSTATE=true
 
 # mysql
 export PATH=/usr/local/mysql/bin:$PATH
+export PATH=/opt/homebrew/opt/mysql@5.7/bin:$PATH
 
 # asdf
 if [ -f $HOME/.asdf/asdf.sh ] ; then
@@ -115,7 +119,7 @@ export PATH=$PATH:${GNU_BD}/bin
 # arm-none-eabi-gcc
 # export PATH=$PATH:/usr/lib/gcc/gcc-arm-none-eabi-7-2017-q4-majo
 
-# for login function
+# for local function
 if [ -f ~/.internal_bashrc ] ; then
     . ~/.internal_bashrc
 fi

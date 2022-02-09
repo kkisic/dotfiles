@@ -28,6 +28,10 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 " Remap for rename current word
 nmap <silent> <leader>rn <Plug>(coc-rename)
 
+" for coc-snippets
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
 let g:coc_global_extensions = [
             \ 'coc-clangd',
             \ 'coc-css',
@@ -36,6 +40,7 @@ let g:coc_global_extensions = [
             \ 'coc-json',
             \ 'coc-rust-analyzer',
             \ 'coc-sh',
+            \ 'coc-snippets',
             \ 'coc-sql',
             \ 'coc-tsserver',
             \ 'coc-vetur',
