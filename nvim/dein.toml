@@ -15,6 +15,7 @@ repo = 'vim-denops/denops.vim'
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
+# call :TSUpdate
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 merged = 0
