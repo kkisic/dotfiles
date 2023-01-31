@@ -3,3 +3,4 @@ golang 1.18
 python 3.9.4
 java adoptopenjdk-17.0.1+12
 deno 1.18.0
+neovim 0.8.2

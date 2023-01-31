@@ -8,14 +8,14 @@ rev = 'release'
 merged = 0
 hook_add = 'source ~/.config/nvim/plugins/coc.rc.vim'
 
-[[plugins]]
-repo = 'vim-denops/denops.vim'
+#[[plugins]]
+#repo = 'vim-denops/denops.vim'
 
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
-# call :TSUpdate
+# update時: ":TSUpdate"
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
 merged = 0

@@ -42,6 +42,7 @@ let g:coc_global_extensions = [
             \ 'coc-sh',
             \ 'coc-snippets',
             \ 'coc-sql',
+            \ 'coc-stylelintplus',
             \ 'coc-tsserver',
             \ 'coc-vetur',
             \ 'coc-vimlsp',

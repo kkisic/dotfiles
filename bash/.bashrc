@@ -55,6 +55,10 @@ alias runhaskell='stack runhaskell'
 # rust
 export PATH=$HOME/.cargo/bin:$PATH
 
+# python
+PY_VER=$(python -V | cut -d ' ' -f 2)
+export PATH=~/.asdf/installs/python/$PY_VER/bin:$PATH
+
 # ~/sh
 export PATH=$HOME/sh:$PATH
 

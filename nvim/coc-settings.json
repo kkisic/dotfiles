@@ -20,5 +20,29 @@
         }
       }
     }
-  }
+  },
+  "prettier.enable": false,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "html",
+    "typescriptreact",
+    "typescript",
+    "javascriptreact",
+    "javascript"
+  ],
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "wxss.validate": false,
+  "stylelintplus.filetypes": [
+    "css",
+    "less",
+    "postcss",
+    "sass",
+    "scss",
+    "sugarss",
+    "vue",
+    "wxss"
+  ],
+  "stylelintplus.autoFixOnFormat": true,
+  "stylelintplus.autoFixOnSave": true
 }

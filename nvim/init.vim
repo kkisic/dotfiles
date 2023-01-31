@@ -36,11 +36,11 @@ inoremap <BS> <Nop>
 noremap <silent> <leader>ch :checkhealth<CR>
 
 "set runtimepath^=~/work/deno/harrow.vim
-let g:denops#server#service#deno_agrs = [
-    \ '-q',
-    \ '--unstable',
-    \ '-A',
-    \]
+"let g:denops#server#service#deno_agrs = [
+"    \ '-q',
+"    \ '--unstable',
+"    \ '-A',
+"    \]
 
 " プラグインが実際にインストールされるディレクトリ
 let s:dein_dir = expand('~/.vim/dein')
