@@ -1,6 +1,6 @@
 " Change denite default options
 call defx#custom#option('_', {
-            \ 'winwidth': 35,
+            \ 'winwidth': 45,
             \ 'split': 'vertical',
             \ 'direction': 'topleft',
             \ 'buffer_name': '',
