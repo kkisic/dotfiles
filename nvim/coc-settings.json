@@ -21,6 +21,7 @@
       }
     }
   },
+  "sql.database": "mysql",
   "prettier.enable": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "html",
@@ -44,5 +45,10 @@
     "wxss"
   ],
   "stylelintplus.autoFixOnFormat": true,
-  "stylelintplus.autoFixOnSave": true
+  "stylelintplus.autoFixOnSave": true,
+  "jedi": {
+    "enable": true,
+    "startupMessage": false,
+    "executable.command": "~/.asdf/installs/python/3.11.2/bin/jedi-language-server"
+  }
 }

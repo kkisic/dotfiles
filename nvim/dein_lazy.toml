@@ -16,6 +16,19 @@ repo = 'Shougo/deol.nvim'
 on_cmd = 'Deol'
 hook_add = 'source ~/.config/nvim/plugins/deol.rc.vim'
 
+[[plugins]]
+repo = 'glidenote/memolist.vim'
+on_cmd = ['MemoGrep', 'MemoList', 'MemoNew']
+hook_add = '''
+nnoremap <Leader>mn  :MemoNew<CR>
+nnoremap <Leader>ml  :MemoList<CR>
+nnoremap <Leader>mg  :MemoGrep<CR>
+
+let g:memolist_path = "$HOME/.vim/memo"
+let g:memolist_denite = 1
+let g:memolist_ex_cmd = 'Defx'
+'''
+
 # need prettier
 [[plugins]]
 repo = 'prettier/vim-prettier'

@@ -20,6 +20,10 @@ build = 'make'
 repo = 'nvim-treesitter/nvim-treesitter'
 merged = 0
 
+# ":Copilot setup" -> ":Copilot enable"
+[[plugins]]
+repo = 'github/copilot.vim'
+
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 

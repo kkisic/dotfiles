@@ -30,9 +30,6 @@ set backupdir=~/.vim/backup
 
 let mapleader = "\<Space>"
 
-noremap <BS> <Nop>
-inoremap <BS> <Nop>
-
 noremap <silent> <leader>ch :checkhealth<CR>
 
 "set runtimepath^=~/work/deno/harrow.vim
@@ -79,6 +76,10 @@ let g:python3_host_prog = substitute(system('which python3'), "\n", "", "g")
 " update plugins
 let g:dein#install_github_api_token = $VIM_GITHUB_TOKEN
 command! -nargs=0 Update call dein#check_update(v:true)
+
+" for digdag syntax highlight
+autocmd BufNewFile,BufRead *.dig set filetype=yaml
+autocmd Syntax yaml setl indentkeys-=<:>
 
 augroup fileTypeIndent
     autocmd!
