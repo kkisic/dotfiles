@@ -22,15 +22,16 @@ clean-nvim:
 
 setup-git:
 	ln -s $(shell pwd)/git/.gitconfig ~/.gitconfig
-	ln -s $(shell pwd)/git/.gitignore_global ~/.gitignore_global
 	ln -s $(shell pwd)/git/.git-completion.bash ~/.git-completion.bash
 	ln -s $(shell pwd)/git/.git-prompt.sh ~/.git-prompt.sh
+	mkdir -p ~/.config/git
+	ln -s $(shell pwd)/git/ignore ~/.config/git/ignore
 
 clean-git:
 	rm ~/.gitconfig
-	rm ~/.gitignore_global
 	rm ~/.git-completion.bash
 	rm ~/.git-prompt.sh
+	rm ~/.config/git/ignore
 
 setup-tmux:
 	ln -s $(shell pwd)/tmux/.tmux.conf ~/.tmux.conf

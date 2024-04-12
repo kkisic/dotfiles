@@ -4,3 +4,4 @@ cover.out
 cover.html
 .envrc
 _gen_swagger.sh
+plan_test/

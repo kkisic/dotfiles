@@ -1,6 +1,6 @@
-nodejs 16.5.0
-golang 1.21.1
+nodejs 21.7.1
+golang 1.22.0
 python 3.11.2
 java adoptopenjdk-17.0.1+12
 deno 1.18.0
-neovim 0.9.4
+neovim 0.9.5
