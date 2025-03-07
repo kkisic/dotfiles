@@ -2,6 +2,12 @@
   "suggest.noselect":false,
   "suggest.preferCompleteThanJumpPlaceholder":true,
   "languageserver": {
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    },
     "haskell": {
       "command": "hie-wrapper",
       "rootPatterns": [

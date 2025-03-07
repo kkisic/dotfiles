@@ -85,8 +85,8 @@ on_ft = ['plaintex']
 
 [[plugins]]
 repo = 'iamcco/markdown-preview.nvim'
-on_ft = ['markdown', 'pandoc.markdown', 'rwd']
-build = 'cd app & yarn install'
+on_ft = ['markdown', 'pandoc.markdown', 'rmd']
+build = 'sh -c "cd app && npx --yes yarn install"'
 
 [[plugins]]
 repo = 'alvan/vim-closetag'
